@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/students_list_view"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="List" />
+    <item
+        android:id="@+id/add_student_view"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Add" />
+
+    <item
+        android:id="@+id/profile_view"
+        android:icon="@drawable/avatar"
+        android:title="Profile" />
+</menu>

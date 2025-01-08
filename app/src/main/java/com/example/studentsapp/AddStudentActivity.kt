@@ -7,31 +7,29 @@ import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class AddStudentActivity : AppCompatActivity()  {
     var navController: NavController? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-        setContentView(R.layout.activity_main)
-
+        setContentView(R.layout.activity_students_recycler_view)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars())
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         setupBottomNavigationView()
-
     }
 
     private fun setupBottomNavigationView() {
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_bar)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.students_recycler_view_bottom_bar)
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.students_list_view -> {
@@ -43,7 +41,6 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.profile_view -> {
-                    println("here")
                     startActivity(Intent(this, ProfileActivity::class.java))
                     true
                 }
