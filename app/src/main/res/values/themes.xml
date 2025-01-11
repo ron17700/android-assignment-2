@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.studentsapp" parent="Theme.MaterialComponents.DayNight.DarkActionBar" />
-
-    <style name="Theme.studentsapp.NoActionBar">
+    <style name="Theme.studentsapp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Disable the default ActionBar -->
+        <item name="windowActionBar">false</item>
+        <!-- Enable support for a custom Toolbar -->
+        <item name="windowNoTitle">true</item>
     </style>
-
-    <style name="Theme.studentsapp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 </resources>
